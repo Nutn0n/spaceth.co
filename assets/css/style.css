@@ -14,8 +14,8 @@ body {
 h1, h2, h3, h4 {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  color:#ACADAE;
-  font-weight: 300;
+  color:#000;
+  font-weight: 500;
 }
 
 a {
@@ -25,15 +25,11 @@ a {
 
 p {
   font-family: 'Open Sans', sans-serif;
-  color:#666;
-}
-
-h1 {
-  font-size: 40px;
+  color:#333;
 }
 
 h2 {
-  font-size:  20px;
+  font-size:  1em;
 }
 
 /* Main Element */
@@ -45,33 +41,40 @@ h2 {
 
 .logo {
     background: url(../image/logo.svg) no-repeat center top;
-    margin: 50px 0 5px 0;
+    margin: 30vh 0 5px 0;
     display: inline-block;
-    background-size: 550px;
+    background-size: 400px;
     width: 100%;
-    height:270px;
+    height:100px;
 }
 
-.sneakpeek {
-  margin-top: 80px;
-  color:#333;
-  transition: 0.4s ease;
+/*  iPhone 7 */
+
+@media screen and (max-width:800px) {
+
+  .logo {
+      background: url(../image/logo.svg) no-repeat center top;
+      margin: 200px 0 5px 0;
+      display: inline-block;
+      background-size: 300px;
+      height:80px;
+  }
+
+  .wrapper {
+    padding: 20px 0px 20px 0px;
+    text-align: center;
+  }
+
 }
 
-.sneakpeek:hover {
-  color:#ACADAE;
-  transition: 0.4s ease;
+/*  iPhone SE */
+
+@media screen and (max-width:320px) {
+  .logo {
+      margin: 160px 0 5px 0;
+  }
 }
 
-.sneakpeek-icon {
-  background: url(../image/sneakpeek.svg);
-  background-size: 40px;
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  margin-right: 10px;
-  margin-bottom: -10px;
-}
 
 /*  Social Media*/
 
@@ -79,23 +82,47 @@ h2 {
   bottom: 30px;
   margin-left: -20px;
   display: inline-block;
-  position: absolute;
   height: 40px;
 }
 
 .social-media .social-media-icon {
-  margin: 0 10px 0 10px;
+  margin: 40px 20px 0 20px;
   display: inline-block;
   width: 30px;
   height: 30px;
 }
 
 .facebook {
-  background: url(../image/facebook.svg);
-  background-size: 30px;
+  background: url(../image/facebook.svg) center center;
+  background-size: 25px;
+  background-repeat: no-repeat;
 }
 
 .facebook:hover{
-    background: url(../image/facebook-color.svg);
+    background: url(../image/facebook-color.svg) center center;
+  background-size: 25px;
+    background-repeat: no-repeat;
+}
+
+.twitter {
+  background: url(../image/twitter.svg);
+  background-size: 30px;
+}
+
+.twitter:hover{
+    background: url(../image/twitter-color.svg);
     background-size: 30px;
+}
+
+/*  Footer*/
+
+footer {
+  bottom:0;
+    width: 100%;
+  position: absolute;
+}
+
+footer p {
+  font-size: .6em;
+  text-align: center;
 }
